@@ -113,10 +113,19 @@
         "dependencies": {
           "AutoMapper": "12.0.0",
           "BitcoinPricePresenter.Abstractions": "1.0.0",
+          "BitcoinPricePresenter.Data.Abstractions": "1.0.0",
           "Microsoft.Extensions.Options": "6.0.0"
         },
         "runtime": {
           "BitcoinPricePresenter.Concrete.dll": {}
+        }
+      },
+      "BitcoinPricePresenter.Data.Abstractions/1.0.0": {
+        "dependencies": {
+          "BitcoinPricePresenter.Abstractions": "1.0.0"
+        },
+        "runtime": {
+          "BitcoinPricePresenter.Data.Abstractions.dll": {}
         }
       }
     }
@@ -231,6 +240,11 @@
       "sha512": ""
     },
     "BitcoinPricePresenter.Concrete/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BitcoinPricePresenter.Data.Abstractions/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

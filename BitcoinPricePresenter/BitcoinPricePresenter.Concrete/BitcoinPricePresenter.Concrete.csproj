@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BitcoinPricePresenter.Abstractions\BitcoinPricePresenter.Abstractions.csproj" />
+    <ProjectReference Include="..\BitcoinPricePresenter.Data.Abstractions\BitcoinPricePresenter.Data.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>

@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcoinPricePresenter", "BitcoinPricePresenter\BitcoinPricePresenter.csproj", "{9C0E632F-CA4B-459B-978A-F85830098496}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitcoinPricePresenter", "BitcoinPricePresenter\BitcoinPricePresenter.csproj", "{9C0E632F-CA4B-459B-978A-F85830098496}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcoinPricePresenter.Abstractions", "BitcoinPricePresenter.Abstractions\BitcoinPricePresenter.Abstractions.csproj", "{F2746225-9156-440C-BEF6-F30DE318B6E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitcoinPricePresenter.Abstractions", "BitcoinPricePresenter.Abstractions\BitcoinPricePresenter.Abstractions.csproj", "{F2746225-9156-440C-BEF6-F30DE318B6E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcoinPricePresenter.Concrete", "BitcoinPricePresenter.Concrete\BitcoinPricePresenter.Concrete.csproj", "{D7BD3CB2-7DA5-4EAB-9D9D-9302134BC3E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitcoinPricePresenter.Concrete", "BitcoinPricePresenter.Concrete\BitcoinPricePresenter.Concrete.csproj", "{D7BD3CB2-7DA5-4EAB-9D9D-9302134BC3E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcoinPricePresenter.Data.Abstractions", "BitcoinPricePresenter.Data.Abstractions\BitcoinPricePresenter.Data.Abstractions.csproj", "{D86AF66E-1EAF-40A4-BEC1-464DB27B2667}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcoinPricePresenter.Tests", "BitcoinPricePresenter.Tests\BitcoinPricePresenter.Tests.csproj", "{D6FED069-B32F-42CD-AB8E-82CB1938C78D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{D7BD3CB2-7DA5-4EAB-9D9D-9302134BC3E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7BD3CB2-7DA5-4EAB-9D9D-9302134BC3E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7BD3CB2-7DA5-4EAB-9D9D-9302134BC3E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D86AF66E-1EAF-40A4-BEC1-464DB27B2667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D86AF66E-1EAF-40A4-BEC1-464DB27B2667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D86AF66E-1EAF-40A4-BEC1-464DB27B2667}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D86AF66E-1EAF-40A4-BEC1-464DB27B2667}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6FED069-B32F-42CD-AB8E-82CB1938C78D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6FED069-B32F-42CD-AB8E-82CB1938C78D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6FED069-B32F-42CD-AB8E-82CB1938C78D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6FED069-B32F-42CD-AB8E-82CB1938C78D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

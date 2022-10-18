@@ -10,6 +10,7 @@
         "dependencies": {
           "AutoMapper": "12.0.0",
           "BitcoinPricePresenter.Abstractions": "1.0.0",
+          "BitcoinPricePresenter.Data.Abstractions": "1.0.0",
           "Microsoft.Extensions.Options": "6.0.0"
         },
         "runtime": {
@@ -64,6 +65,14 @@
         "runtime": {
           "BitcoinPricePresenter.Abstractions.dll": {}
         }
+      },
+      "BitcoinPricePresenter.Data.Abstractions/1.0.0": {
+        "dependencies": {
+          "BitcoinPricePresenter.Abstractions": "1.0.0"
+        },
+        "runtime": {
+          "BitcoinPricePresenter.Data.Abstractions.dll": {}
+        }
       }
     }
   },
@@ -116,6 +125,11 @@
       "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
     },
     "BitcoinPricePresenter.Abstractions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BitcoinPricePresenter.Data.Abstractions/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

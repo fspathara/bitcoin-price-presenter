@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BitcoinPricePresenter.Abstractions\BitcoinPricePresenter.Abstractions.csproj" />
+  </ItemGroup>
+
 </Project>
