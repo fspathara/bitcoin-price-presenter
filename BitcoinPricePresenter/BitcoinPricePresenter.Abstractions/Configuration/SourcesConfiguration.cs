@@ -2,6 +2,6 @@
 {
     public class SourcesConfiguration
     {
-        public Dictionary<string, SourceSpecificConfiguration> Sources { get; set; }
+        public Dictionary<string, SourceSpecificConfiguration> Sources { get; set; } = new Dictionary<string, SourceSpecificConfiguration>();
     }
 }

@@ -10,6 +10,14 @@ namespace BitcoinPricePresenter.Concrete.Mappings
     {
         public PriceProfile()
         {
+            CreateMap<BitfinexPriceModel, PriceModel>(MemberList.Destination)
+                .ForMember(d => d.Price, options => options.MapFrom(s => s.Price))
+                .ForMember(d => d.Timestamp, options => options.MapFrom(s => (long)s.Timestamp));
+
+            CreateMap<BitstampPriceModel, PriceModel>(MemberList.Destination)
+                .ForMember(d => d.Price, options => options.MapFrom(s => s.Price))
+                .ForMember(d => d.Timestamp, options => options.MapFrom(s => s.Timestamp));
+
             CreateMap<PriceModel, PriceViewModel>(MemberList.Destination)
                 .ForMember(d => d.Price, options => options.MapFrom(s => s.Price))
                 .ForMember(d => d.Timestamp, options => options.MapFrom(s => s.Timestamp.FromUnixTimestamp()))

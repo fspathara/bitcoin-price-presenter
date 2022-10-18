@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcoinPricePresenter.Data.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcoinPricePresenter.Tests", "BitcoinPricePresenter.Tests\BitcoinPricePresenter.Tests.csproj", "{D6FED069-B32F-42CD-AB8E-82CB1938C78D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcoinPricePresenter.Data", "BitcoinPricePresenter.Data\BitcoinPricePresenter.Data.csproj", "{9F30B900-0B90-49D2-9510-A3537BF2629C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{D6FED069-B32F-42CD-AB8E-82CB1938C78D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6FED069-B32F-42CD-AB8E-82CB1938C78D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6FED069-B32F-42CD-AB8E-82CB1938C78D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F30B900-0B90-49D2-9510-A3537BF2629C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F30B900-0B90-49D2-9510-A3537BF2629C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F30B900-0B90-49D2-9510-A3537BF2629C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F30B900-0B90-49D2-9510-A3537BF2629C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
