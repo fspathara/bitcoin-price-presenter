@@ -1,0 +1,15 @@
+D:\Projects\BitcoinPricePresenter\BitcoinPricePresenter\BitcoinPricePresenter.Concrete\obj\Debug\net6.0\BitcoinPricePresenter.Concrete.csproj.AssemblyReference.cache
+D:\Projects\BitcoinPricePresenter\BitcoinPricePresenter\BitcoinPricePresenter.Concrete\obj\Debug\net6.0\BitcoinPricePresenter.Concrete.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\BitcoinPricePresenter\BitcoinPricePresenter\BitcoinPricePresenter.Concrete\obj\Debug\net6.0\BitcoinPricePresenter.Concrete.AssemblyInfoInputs.cache
+D:\Projects\BitcoinPricePresenter\BitcoinPricePresenter\BitcoinPricePresenter.Concrete\obj\Debug\net6.0\BitcoinPricePresenter.Concrete.AssemblyInfo.cs
+D:\Projects\BitcoinPricePresenter\BitcoinPricePresenter\BitcoinPricePresenter.Concrete\obj\Debug\net6.0\BitcoinPricePresenter.Concrete.csproj.CoreCompileInputs.cache
+D:\Projects\BitcoinPricePresenter\BitcoinPricePresenter\BitcoinPricePresenter.Concrete\bin\Debug\net6.0\BitcoinPricePresenter.Concrete.deps.json
+D:\Projects\BitcoinPricePresenter\BitcoinPricePresenter\BitcoinPricePresenter.Concrete\bin\Debug\net6.0\BitcoinPricePresenter.Concrete.dll
+D:\Projects\BitcoinPricePresenter\BitcoinPricePresenter\BitcoinPricePresenter.Concrete\bin\Debug\net6.0\BitcoinPricePresenter.Concrete.pdb
+D:\Projects\BitcoinPricePresenter\BitcoinPricePresenter\BitcoinPricePresenter.Concrete\bin\Debug\net6.0\BitcoinPricePresenter.Abstractions.dll
+D:\Projects\BitcoinPricePresenter\BitcoinPricePresenter\BitcoinPricePresenter.Concrete\bin\Debug\net6.0\BitcoinPricePresenter.Abstractions.pdb
+D:\Projects\BitcoinPricePresenter\BitcoinPricePresenter\BitcoinPricePresenter.Concrete\obj\Debug\net6.0\BitcoinPricePresenter.Concrete.csproj.CopyComplete
+D:\Projects\BitcoinPricePresenter\BitcoinPricePresenter\BitcoinPricePresenter.Concrete\obj\Debug\net6.0\BitcoinPricePresenter.Concrete.dll
+D:\Projects\BitcoinPricePresenter\BitcoinPricePresenter\BitcoinPricePresenter.Concrete\obj\Debug\net6.0\refint\BitcoinPricePresenter.Concrete.dll
+D:\Projects\BitcoinPricePresenter\BitcoinPricePresenter\BitcoinPricePresenter.Concrete\obj\Debug\net6.0\BitcoinPricePresenter.Concrete.pdb
+D:\Projects\BitcoinPricePresenter\BitcoinPricePresenter\BitcoinPricePresenter.Concrete\obj\Debug\net6.0\ref\BitcoinPricePresenter.Concrete.dll

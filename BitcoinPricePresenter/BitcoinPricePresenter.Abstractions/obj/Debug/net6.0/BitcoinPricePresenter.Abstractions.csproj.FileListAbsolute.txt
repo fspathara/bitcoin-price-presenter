@@ -1,0 +1,12 @@
+D:\Projects\BitcoinPricePresenter\BitcoinPricePresenter\BitcoinPricePresenter.Abstractions\bin\Debug\net6.0\BitcoinPricePresenter.Abstractions.deps.json
+D:\Projects\BitcoinPricePresenter\BitcoinPricePresenter\BitcoinPricePresenter.Abstractions\bin\Debug\net6.0\BitcoinPricePresenter.Abstractions.dll
+D:\Projects\BitcoinPricePresenter\BitcoinPricePresenter\BitcoinPricePresenter.Abstractions\bin\Debug\net6.0\BitcoinPricePresenter.Abstractions.pdb
+D:\Projects\BitcoinPricePresenter\BitcoinPricePresenter\BitcoinPricePresenter.Abstractions\obj\Debug\net6.0\BitcoinPricePresenter.Abstractions.csproj.AssemblyReference.cache
+D:\Projects\BitcoinPricePresenter\BitcoinPricePresenter\BitcoinPricePresenter.Abstractions\obj\Debug\net6.0\BitcoinPricePresenter.Abstractions.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\BitcoinPricePresenter\BitcoinPricePresenter\BitcoinPricePresenter.Abstractions\obj\Debug\net6.0\BitcoinPricePresenter.Abstractions.AssemblyInfoInputs.cache
+D:\Projects\BitcoinPricePresenter\BitcoinPricePresenter\BitcoinPricePresenter.Abstractions\obj\Debug\net6.0\BitcoinPricePresenter.Abstractions.AssemblyInfo.cs
+D:\Projects\BitcoinPricePresenter\BitcoinPricePresenter\BitcoinPricePresenter.Abstractions\obj\Debug\net6.0\BitcoinPricePresenter.Abstractions.csproj.CoreCompileInputs.cache
+D:\Projects\BitcoinPricePresenter\BitcoinPricePresenter\BitcoinPricePresenter.Abstractions\obj\Debug\net6.0\BitcoinPricePresenter.Abstractions.dll
+D:\Projects\BitcoinPricePresenter\BitcoinPricePresenter\BitcoinPricePresenter.Abstractions\obj\Debug\net6.0\refint\BitcoinPricePresenter.Abstractions.dll
+D:\Projects\BitcoinPricePresenter\BitcoinPricePresenter\BitcoinPricePresenter.Abstractions\obj\Debug\net6.0\BitcoinPricePresenter.Abstractions.pdb
+D:\Projects\BitcoinPricePresenter\BitcoinPricePresenter\BitcoinPricePresenter.Abstractions\obj\Debug\net6.0\ref\BitcoinPricePresenter.Abstractions.dll

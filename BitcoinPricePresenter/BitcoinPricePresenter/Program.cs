@@ -1,3 +1,7 @@
+using BitcoinPricePresenter.Abstractions.Configuration;
+using BitcoinPricePresenter.Abstractions.Services;
+using BitcoinPricePresenter.Concrete.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +10,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+builder.Services.Configure<SourcesConfiguration>(builder.Configuration);
+builder.Services.AddSingleton<ISourcesConfigurationService, SourcesConfigurationService>();
 
 var app = builder.Build();
 

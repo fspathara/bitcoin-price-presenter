@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "qLBD1YYzokeia7YNPK84efQg586v0jFpG6ytXMI0zPhUbGRDo59hvVynImNhQGf7SswDFA7eCIBpZyJVNRIqLA==",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\BitcoinPricePresenter\\BitcoinPricePresenter\\BitcoinPricePresenter.Concrete\\BitcoinPricePresenter.Concrete.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\fotis\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\fotis\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\fotis\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\fotis\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\fotis\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\fotis\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
