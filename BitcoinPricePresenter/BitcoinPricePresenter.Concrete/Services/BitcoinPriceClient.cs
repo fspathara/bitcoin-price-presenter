@@ -1,6 +1,7 @@
 ﻿using BitcoinPricePresenter.Abstractions.Models.Dtos;
 using BitcoinPricePresenter.Abstractions.Services;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace BitcoinPricePresenter.Concrete.Services
 {
@@ -9,6 +10,11 @@ namespace BitcoinPricePresenter.Concrete.Services
         protected readonly HttpClient HttpClient;
         protected readonly ISourcesConfigurationService SourcesConfigurationService;
 
+        private static readonly Lazy<JsonSerializerOptions> options = new Lazy<JsonSerializerOptions>(() =>
+        {
+            var options = new JsonSerializerOptions();
+            return options;
+        });
         public BitcoinPriceClient(HttpClient httpClient, ISourcesConfigurationService sourcesConfigurationService)
         {
             HttpClient = httpClient;
@@ -22,7 +28,7 @@ namespace BitcoinPricePresenter.Concrete.Services
             response.EnsureSuccessStatusCode();
 
             var stream = await response.Content.ReadAsStreamAsync();
-            var price = await JsonSerializer.DeserializeAsync<TResponse>(stream);
+            var price = await JsonSerializer.DeserializeAsync<TResponse>(stream, options.Value);
 
             if (price is null)
             {

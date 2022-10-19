@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
 using BitcoinPricePresenter.Abstractions;
 using BitcoinPricePresenter.Abstractions.Constants;
+using BitcoinPricePresenter.Abstractions.Models.DbModels;
 using BitcoinPricePresenter.Abstractions.Models.Dtos;
 using BitcoinPricePresenter.Abstractions.Models.ViewModels;
+using System.Globalization;
 
 namespace BitcoinPricePresenter.Concrete.Mappings
 {
@@ -11,12 +13,16 @@ namespace BitcoinPricePresenter.Concrete.Mappings
         public PriceProfile()
         {
             CreateMap<BitfinexPriceModel, PriceModel>(MemberList.Destination)
-                .ForMember(d => d.Price, options => options.MapFrom(s => s.Price))
-                .ForMember(d => d.Timestamp, options => options.MapFrom(s => (long)s.Timestamp));
+                .ForMember(d => d.Price, options => options.MapFrom(s => decimal.Parse(s.Price, NumberStyles.AllowDecimalPoint | NumberStyles.AllowThousands, CultureInfo.InvariantCulture)))
+                .ForMember(d => d.Timestamp, options => options.MapFrom(s => s.Timestamp.ToTimestamp()));
 
             CreateMap<BitstampPriceModel, PriceModel>(MemberList.Destination)
+                .ForMember(d => d.Price, options => options.MapFrom(s => decimal.Parse(s.Price, NumberStyles.AllowDecimalPoint | NumberStyles.AllowThousands, CultureInfo.InvariantCulture)))
+                .ForMember(d => d.Timestamp, options => options.MapFrom(s => long.Parse(s.Timestamp)));
+
+            CreateMap<PriceModel, PriceDbModel>(MemberList.Destination)
                 .ForMember(d => d.Price, options => options.MapFrom(s => s.Price))
-                .ForMember(d => d.Timestamp, options => options.MapFrom(s => s.Timestamp));
+                .ForMember(d => d.Timestamp, options => options.MapFrom(s => s.Timestamp.FromUnixTimestamp()));
 
             CreateMap<PriceModel, PriceViewModel>(MemberList.Destination)
                 .ForMember(d => d.Price, options => options.MapFrom(s => s.Price))

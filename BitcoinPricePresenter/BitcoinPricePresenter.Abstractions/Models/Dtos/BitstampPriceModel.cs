@@ -1,19 +1,20 @@
 ﻿using System.Text.Json.Serialization;
+using System.Text.Json.Serialization.Converters;
 
 namespace BitcoinPricePresenter.Abstractions.Models.Dtos
 {
     public class BitstampPriceModel
     {
         [JsonPropertyName("timestamp")]
-        public long Timestamp { get; set; }
+        public string Timestamp { get; set; }
         [JsonPropertyName("open")]
-        public decimal Price { get; set; }
+        public string Price { get; set; }
         [JsonPropertyName("high")]
-        public decimal HighestPrice { get; set; }
+        public string HighestPrice { get; set; }
         [JsonPropertyName("low")]
         public string LowestPrice { get; set; }
         [JsonPropertyName("percent_change_24")]
-        public decimal PercentChange24h { get; set; }
+        public string PercentChange24h { get; set; }
     }
 
 }

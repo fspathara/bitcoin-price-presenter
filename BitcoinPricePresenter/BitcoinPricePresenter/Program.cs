@@ -1,15 +1,21 @@
 using BitcoinPricePresenter.Abstractions.Configuration;
 using BitcoinPricePresenter.Abstractions.Policies;
 using BitcoinPricePresenter.Abstractions.Services;
+using BitcoinPricePresenter.Abstractions.Utils;
 using BitcoinPricePresenter.Concrete.Services;
 using BitcoinPricePresenter.Data.Abstractions.Repositories;
 using BitcoinPricePresenter.Data.Repositories;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(s =>
+{
+    s.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+    s.JsonSerializerOptions.Converters.Add(new DecimalFormatConverter());
+});
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
