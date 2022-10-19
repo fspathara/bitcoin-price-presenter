@@ -37,12 +37,12 @@ namespace BitcoinPricePresenter.Tests.Services
             bitcoinPriceProviderFactory.Setup(factoryExpression)
                 .Returns(priceProvider.Object);
 
-            Expression<Func<IPricesRepository, Task>> insertExpression = s => s.InsertPriceAsync(It.IsAny<PriceDbModel>());
+            Expression<Func<IPricesRepository, Task<PriceDbModel>>> insertExpression = s => s.InsertPriceAsync(It.IsAny<PriceDbModel>());
             priceRepository.Setup(insertExpression)
-                           .Returns(Task.CompletedTask);
+                           .ReturnsUsingFixture(fixture);
 
-            Expression<Func<IMapper, PriceDbModel>> dbModelMappingExpression = s => s.Map<PriceDbModel>(It.IsAny<PriceModel>());
-            Expression<Func<IMapper, PriceViewModel>> viewModelMappingExpression = s => s.Map<PriceViewModel>(It.IsAny<PriceModel>(), It.IsAny<Action<IMappingOperationOptions<object, PriceViewModel>>>());
+            Expression<Func<IMapper, PriceDbModel>> dbModelMappingExpression = s => s.Map<PriceDbModel>(It.IsAny<PriceModel>(), It.IsAny<Action<IMappingOperationOptions<object, PriceDbModel>>>());
+            Expression<Func<IMapper, PriceViewModel>> viewModelMappingExpression = s => s.Map<PriceViewModel>(It.IsAny<PriceDbModel>());
 
             mapper.Setup(dbModelMappingExpression)
                 .ReturnsUsingFixture(fixture);

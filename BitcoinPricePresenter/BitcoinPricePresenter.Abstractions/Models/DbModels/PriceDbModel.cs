@@ -2,6 +2,7 @@
 {
     public class PriceDbModel
     {
+        public int Id { get; set; }
         public SourceEnum Source { get; set; }
 
         public DateTime Timestamp { get; set; }

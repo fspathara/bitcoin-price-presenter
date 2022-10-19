@@ -22,10 +22,6 @@ namespace BitcoinPricePresenter.Concrete.Mappings
 
             CreateMap<PriceModel, PriceDbModel>(MemberList.Destination)
                 .ForMember(d => d.Price, options => options.MapFrom(s => s.Price))
-                .ForMember(d => d.Timestamp, options => options.MapFrom(s => s.Timestamp.FromUnixTimestamp()));
-
-            CreateMap<PriceModel, PriceViewModel>(MemberList.Destination)
-                .ForMember(d => d.Price, options => options.MapFrom(s => s.Price))
                 .ForMember(d => d.Timestamp, options => options.MapFrom(s => s.Timestamp.FromUnixTimestamp()))
                 .ForMember(d => d.Source, options => options.MapFrom((s, _, _, cont) =>
                 {
@@ -40,7 +36,13 @@ namespace BitcoinPricePresenter.Concrete.Mappings
                         throw new InvalidCastException($"Cannot parse {stringValue} to {nameof(SourceEnum)}");
                     }
                     return parsedValue;
-                }));
+                })); ;
+
+            CreateMap<PriceDbModel, PriceViewModel>(MemberList.Destination)
+                .ForMember(d => d.Id, options => options.MapFrom(s => s.Id))
+                .ForMember(d => d.Price, options => options.MapFrom(s => s.Price))
+                .ForMember(d => d.Timestamp, options => options.MapFrom(s => s.Timestamp))
+                .ForMember(d => d.Source, options => options.MapFrom(s => s.Source));
         }
     }
 }

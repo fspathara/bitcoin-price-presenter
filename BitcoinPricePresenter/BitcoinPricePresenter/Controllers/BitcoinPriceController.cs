@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using BitcoinPricePresenter.Abstractions.Models.Queries;
+using BitcoinPricePresenter.Abstractions.Models.Requests;
 using BitcoinPricePresenter.Abstractions.Models.ViewModels;
 using BitcoinPricePresenter.Abstractions.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -22,7 +24,7 @@ namespace BitcoinPricePresenter.Controllers
             _bitcoinPriceService = bitcoinPriceService;
         }
 
-        [HttpGet("[action]")]
+        [HttpGet]
         [ProducesResponseType(typeof(GetSourcesViewModel), StatusCodes.Status200OK)]
         public IActionResult GetSources()
         {
@@ -31,12 +33,20 @@ namespace BitcoinPricePresenter.Controllers
             return Ok(response);
         }
 
-        [HttpPost("[action]/{source}")]
+        [HttpPost("{source}")]
         [ProducesResponseType(typeof(GetSourcesViewModel), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetCurrentPriceAsync(SourceEnum source)
         {
-            var serviceResult = await _bitcoinPriceService.GetCurrentPriceFromSourceAsync(source);
-            return Ok(serviceResult);
+            var currentPrice = await _bitcoinPriceService.GetCurrentPriceFromSourceAsync(source);
+            return Ok(currentPrice);
+        }
+
+        [HttpPost]
+        [ProducesResponseType(typeof(List<GetSourcesViewModel>), StatusCodes.Status200OK)]
+        public async Task<IActionResult> GetHistory([FromBody] GetHistoryRequest request)
+        {
+            var prices = await _bitcoinPriceService.GetPricesForQuery(_mapper.Map<PriceGetQuery>(request));
+            return Ok(prices);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BitcoinPricePresenter.Abstractions.Constants;
 using BitcoinPricePresenter.Abstractions.Models.DbModels;
+using BitcoinPricePresenter.Abstractions.Models.Queries;
 using BitcoinPricePresenter.Abstractions.Models.ViewModels;
 using BitcoinPricePresenter.Abstractions.Services;
 using BitcoinPricePresenter.Data.Abstractions.Repositories;
@@ -27,9 +28,15 @@ namespace BitcoinPricePresenter.Concrete.Services
         {
             var provider = _providerFactory.GetForSource(source);
             var price = await provider.GetCurrentPriceAsync();
-            var priceModel = _mapper.Map<PriceDbModel>(price);
-            await _priceRepository.InsertPriceAsync(priceModel);
-            return _mapper.Map<PriceViewModel>(price, opts => opts.Items[Constants.Mapping.Source] = source);
+            var priceDbModel = _mapper.Map<PriceDbModel>(price, opts => opts.Items[Constants.Mapping.Source] = source);
+            priceDbModel = await _priceRepository.InsertPriceAsync(priceDbModel);
+            return _mapper.Map<PriceViewModel>(priceDbModel);
+        }
+
+        public async Task<List<PriceViewModel>> GetPricesForQuery(PriceGetQuery query)
+        {
+            var results = await _priceRepository.GetForPeriodAsync(query);
+            return _mapper.Map<List<PriceViewModel>>(results);
         }
     }
 }
