@@ -7,6 +7,6 @@ namespace BitcoinPricePresenter.Abstractions.Services
     {
         Task<PriceViewModel> GetCurrentPriceFromSourceAsync(SourceEnum source);
 
-        Task<List<PriceViewModel>> GetPricesForQuery(PriceGetQuery query);
+        Task<List<PriceViewModel>> GetPrices(GetPricesQuery query);
     }
 }

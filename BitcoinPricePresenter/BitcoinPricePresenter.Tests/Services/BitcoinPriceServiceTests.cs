@@ -4,6 +4,7 @@ using AutoFixture.Xunit2;
 using AutoMapper;
 using BitcoinPricePresenter.Abstractions.Models.DbModels;
 using BitcoinPricePresenter.Abstractions.Models.Dtos;
+using BitcoinPricePresenter.Abstractions.Models.Queries;
 using BitcoinPricePresenter.Abstractions.Models.ViewModels;
 using BitcoinPricePresenter.Abstractions.Services;
 using BitcoinPricePresenter.Concrete.Services;
@@ -11,6 +12,7 @@ using BitcoinPricePresenter.Data.Abstractions.Repositories;
 using BitcoinPricePresenter.Tests.Extensions;
 using Moq;
 using System;
+using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Xunit;
@@ -60,6 +62,30 @@ namespace BitcoinPricePresenter.Tests.Services
 
             mapper.Verify(dbModelMappingExpression, Times.Once);
             mapper.Verify(viewModelMappingExpression, Times.Once);
+        }
+
+        [Theory]
+        [AutoMoqData]
+        public async Task GetPrices_WhenCalled_CallsRepositoryAndReturnsResults(
+           [Frozen] Mock<IPricesRepository> priceRepository,
+           [Frozen] Mock<IMapper> mapper,
+           BitcoinPriceService sut)
+        {
+            var fixture = new Fixture().Customize(new AutoMoqCustomization());
+
+            Expression<Func<IPricesRepository, Task<List<PriceDbModel>>>> getExpression = s => s.GetForPeriodAsync(It.IsAny<GetPricesQuery>());
+            priceRepository.Setup(getExpression)
+                           .ReturnsUsingFixture(fixture);
+
+            Expression<Func<IMapper, List<PriceViewModel>>> dbModelMappingExpression = s => s.Map<List<PriceViewModel>>(It.IsAny<List<PriceDbModel>>());
+
+            mapper.Setup(dbModelMappingExpression)
+                .ReturnsUsingFixture(fixture);
+
+            await sut.GetPrices(It.IsAny<GetPricesQuery>());
+
+            priceRepository.Verify(getExpression, Times.Once);
+            mapper.Verify(dbModelMappingExpression, Times.Once);
         }
     }
 }

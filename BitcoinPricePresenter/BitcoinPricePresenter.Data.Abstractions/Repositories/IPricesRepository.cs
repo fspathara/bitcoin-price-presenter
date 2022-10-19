@@ -7,6 +7,6 @@ namespace BitcoinPricePresenter.Data.Abstractions.Repositories
     {
         Task<PriceDbModel> InsertPriceAsync(PriceDbModel price);
 
-        Task<List<PriceDbModel>> GetForPeriodAsync(PriceGetQuery query);
+        Task<List<PriceDbModel>> GetForPeriodAsync(GetPricesQuery query);
     }
 }

@@ -8,7 +8,7 @@ namespace BitcoinPricePresenter.Concrete.Mappings
     {
         public QueryProfile()
         {
-            CreateMap<GetHistoryRequest, PriceGetQuery>(MemberList.Destination)
+            CreateMap<GetHistoryRequest, GetPricesQuery>(MemberList.Destination)
                 .ForMember(d => d.DateRange, options => options.MapFrom(s => s.DateRange))
                 .ForMember(d => d.Limit, options => options.MapFrom(s => s.MaxItems))
                 .ForMember(d => d.Page, options => options.MapFrom(s => s.Page));

@@ -1,6 +1,6 @@
 ﻿namespace BitcoinPricePresenter.Abstractions.Models.Queries
 {
-    public class PriceGetQuery
+    public class GetPricesQuery
     {
         public DateRange DateRange { get; set; } = new();
 

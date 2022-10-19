@@ -45,7 +45,7 @@ namespace BitcoinPricePresenter.Controllers
         [ProducesResponseType(typeof(List<GetSourcesViewModel>), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetHistory([FromBody] GetHistoryRequest request)
         {
-            var prices = await _bitcoinPriceService.GetPricesForQuery(_mapper.Map<PriceGetQuery>(request));
+            var prices = await _bitcoinPriceService.GetPrices(_mapper.Map<GetPricesQuery>(request));
             return Ok(prices);
         }
     }

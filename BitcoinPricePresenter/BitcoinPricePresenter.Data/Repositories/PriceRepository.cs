@@ -7,7 +7,7 @@ namespace BitcoinPricePresenter.Data.Repositories
 {
     public class PriceRepository : IPricesRepository
     {
-        public async Task<List<PriceDbModel>> GetForPeriodAsync(PriceGetQuery query)
+        public async Task<List<PriceDbModel>> GetForPeriodAsync(GetPricesQuery query)
         {
             using var context = new RepositoryContext();
             var list = await context.Prices

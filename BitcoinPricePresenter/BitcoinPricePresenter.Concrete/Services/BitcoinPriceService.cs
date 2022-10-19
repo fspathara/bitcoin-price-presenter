@@ -33,7 +33,7 @@ namespace BitcoinPricePresenter.Concrete.Services
             return _mapper.Map<PriceViewModel>(priceDbModel);
         }
 
-        public async Task<List<PriceViewModel>> GetPricesForQuery(PriceGetQuery query)
+        public async Task<List<PriceViewModel>> GetPrices(GetPricesQuery query)
         {
             var results = await _priceRepository.GetForPeriodAsync(query);
             return _mapper.Map<List<PriceViewModel>>(results);
