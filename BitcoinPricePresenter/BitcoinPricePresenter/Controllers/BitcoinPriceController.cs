@@ -42,6 +42,7 @@ namespace BitcoinPricePresenter.Controllers
         }
 
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(List<GetSourcesViewModel>), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetHistory([FromBody] GetHistoryRequest request)
         {

@@ -1,10 +1,14 @@
 using BitcoinPricePresenter.Abstractions.Configuration;
+using BitcoinPricePresenter.Abstractions.Models.Requests;
 using BitcoinPricePresenter.Abstractions.Policies;
 using BitcoinPricePresenter.Abstractions.Services;
 using BitcoinPricePresenter.Abstractions.Utils;
+using BitcoinPricePresenter.Abstractions.Validators;
 using BitcoinPricePresenter.Concrete.Services;
 using BitcoinPricePresenter.Data.Abstractions.Repositories;
 using BitcoinPricePresenter.Data.Repositories;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -41,6 +45,9 @@ builder.Services.AddHttpClient<IBitstampClient, BitstampClient>(c => c.BaseAddre
 
 builder.Services.AddHttpClient<IBitfinexClient, BitfinexClient>(c => c.BaseAddress = new Uri(sourcesConfiguration.Sources[SourceEnum.Bitfinex.ToString()].BaseUrl))
                 .AddPolicyHandler(HttpClientPolicies.GetRetryPolicy());
+
+builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddScoped<IValidator<GetHistoryRequest>, GetHistoryRequestValidator>();
 
 var app = builder.Build();
 
