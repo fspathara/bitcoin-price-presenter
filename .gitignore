@@ -457,3 +457,6 @@ $RECYCLE.BIN/
 *.cache
 *.pdb
 **/obj
+
+*.deps.json
+*CoverletSourceRootsMapping
