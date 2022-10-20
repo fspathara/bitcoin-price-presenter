@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BitcoinPricePresenter.Data
 {
-    public class RepositoryContext: DbContext
+    public class RepositoryContext : DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public RepositoryContext(DbContextOptions dbContextOptions): base(dbContextOptions)
         {
-            optionsBuilder.UseInMemoryDatabase(databaseName: "PricesDb");
+
         }
 
         public DbSet<PriceDbModel> Prices { get; set; }

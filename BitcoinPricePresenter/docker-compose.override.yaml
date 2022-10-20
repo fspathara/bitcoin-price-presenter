@@ -1,0 +1,5 @@
+version: "3.9"
+services:
+    web:
+        environment:
+            - "ConnectionStrings:PricesDb=Server=mssql1;Database=PricesDb;User Id=sa;Password=v3ryStr0ngP@ss"

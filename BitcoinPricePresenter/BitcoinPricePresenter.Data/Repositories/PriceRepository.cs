@@ -7,10 +7,16 @@ namespace BitcoinPricePresenter.Data.Repositories
 {
     public class PriceRepository : IPricesRepository
     {
+        private readonly RepositoryContext _repositoryContext;
+
+        public PriceRepository(RepositoryContext repositoryContext)
+        {
+            _repositoryContext = repositoryContext;
+        }
+
         public async Task<List<PriceDbModel>> GetForPeriodAsync(GetPricesQuery query)
         {
-            using var context = new RepositoryContext();
-            var list = await context.Prices
+            var list = await _repositoryContext.Prices
                 .Where(s => s.Timestamp >= query.DateRange.DateFrom && s.Timestamp <= query.DateRange.DateTo)
                 .Skip((query.Page - 1) * query.Limit)
                 .Take(query.Limit)
@@ -20,11 +26,9 @@ namespace BitcoinPricePresenter.Data.Repositories
 
         public async Task<PriceDbModel> InsertPriceAsync(PriceDbModel price)
         {
-            using var context = new RepositoryContext();
+            await _repositoryContext.AddAsync(price);
 
-            await context.AddAsync(price);
-
-            await context.SaveChangesAsync();
+            await _repositoryContext.SaveChangesAsync();
 
             return price;
         }

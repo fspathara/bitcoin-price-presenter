@@ -9,11 +9,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitcoinPricePresenter.Abstr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitcoinPricePresenter.Concrete", "BitcoinPricePresenter.Concrete\BitcoinPricePresenter.Concrete.csproj", "{D7BD3CB2-7DA5-4EAB-9D9D-9302134BC3E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcoinPricePresenter.Data.Abstractions", "BitcoinPricePresenter.Data.Abstractions\BitcoinPricePresenter.Data.Abstractions.csproj", "{D86AF66E-1EAF-40A4-BEC1-464DB27B2667}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitcoinPricePresenter.Data.Abstractions", "BitcoinPricePresenter.Data.Abstractions\BitcoinPricePresenter.Data.Abstractions.csproj", "{D86AF66E-1EAF-40A4-BEC1-464DB27B2667}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcoinPricePresenter.Tests", "BitcoinPricePresenter.Tests\BitcoinPricePresenter.Tests.csproj", "{D6FED069-B32F-42CD-AB8E-82CB1938C78D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitcoinPricePresenter.Tests", "BitcoinPricePresenter.Tests\BitcoinPricePresenter.Tests.csproj", "{D6FED069-B32F-42CD-AB8E-82CB1938C78D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcoinPricePresenter.Data", "BitcoinPricePresenter.Data\BitcoinPricePresenter.Data.csproj", "{9F30B900-0B90-49D2-9510-A3537BF2629C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitcoinPricePresenter.Data", "BitcoinPricePresenter.Data\BitcoinPricePresenter.Data.csproj", "{9F30B900-0B90-49D2-9510-A3537BF2629C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{710DD614-4AF8-4D89-8E0E-07614E36BA15}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.override.yaml = docker-compose.override.yaml
+		docker-compose.yaml = docker-compose.yaml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
