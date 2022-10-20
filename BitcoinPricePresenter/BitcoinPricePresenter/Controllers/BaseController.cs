@@ -1,11 +1,12 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.Net.Mime;
 
 namespace BitcoinPricePresenter.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class BaseController : ControllerBase
+    [Produces(MediaTypeNames.Application.Json)]
+    public abstract class BaseController : ControllerBase
     {
     }
 }

@@ -34,7 +34,7 @@ namespace BitcoinPricePresenter.Controllers
         }
 
         [HttpPost("{source}")]
-        [ProducesResponseType(typeof(GetSourcesViewModel), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(PriceViewModel), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetCurrentPriceAsync(SourceEnum source)
         {
             var currentPrice = await _bitcoinPriceService.GetCurrentPriceFromSourceAsync(source);
@@ -43,7 +43,7 @@ namespace BitcoinPricePresenter.Controllers
 
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(List<GetSourcesViewModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(List<PriceViewModel>), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetHistory([FromBody] GetHistoryRequest request)
         {
             var prices = await _bitcoinPriceService.GetPrices(_mapper.Map<GetPricesQuery>(request));
