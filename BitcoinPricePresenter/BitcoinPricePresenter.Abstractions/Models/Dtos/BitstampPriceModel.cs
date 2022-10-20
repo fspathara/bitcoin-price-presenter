@@ -1,5 +1,4 @@
 ﻿using System.Text.Json.Serialization;
-using System.Text.Json.Serialization.Converters;
 
 namespace BitcoinPricePresenter.Abstractions.Models.Dtos
 {
